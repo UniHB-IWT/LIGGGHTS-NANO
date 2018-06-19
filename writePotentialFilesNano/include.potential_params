@@ -1,0 +1,14 @@
+# parameter file for liggghts input created by using the following settings: humidity 0.5, equi_dist 0.57, delta_h 0.15, sigma_solv = 0.21, F_solv_b = -11.0, F_solv_m = -2.4
+########################## Pair Potential Parameters ###########################
+############### Material properties required for gran pair style ###############
+fix             p1 all property/global kn peratomtypepair 2 19979267263.9 21485037977.9 21485037977.9 23291572015.7
+fix             p2 all property/global kt peratomtypepair 2 19979267263.9 21485037977.9 21485037977.9 23291572015.7
+fix             p3 all property/global coefficientRollingFriction peratomtypepair 2 250000000.0 250000000.0 250000000.0 250000000.0
+fix             p4 all property/global coefficientFriction peratomtypepair 2 650000000.0 650000000.0 650000000.0 650000000.0
+fix             p5 all property/global gamman peratomtypepair 2 5.0e+06 5.0e+06 5.0e+06 5.0e+06
+fix             p6 all property/global gammat peratomtypepair 2 0.0e+00 0.0e+00 0.0e+00 0.0e+00
+pair_style      hybrid/overlay gran model hertz/stiffness/nano tangential nano cohesion bond rolling_friction nano per_molecule on table linear 450
+pair_coeff      * * gran
+pair_coeff        1 1 table include.potential_table CAP_SOLV_3_3
+pair_coeff        1 2 table include.potential_table CAP_SOLV_3_4
+pair_coeff        2 2 table include.potential_table CAP_SOLV_4_4

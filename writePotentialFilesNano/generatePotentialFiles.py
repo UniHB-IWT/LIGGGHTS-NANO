@@ -1,7 +1,7 @@
 from lib.calcSolvationAndCapillaryForces import potential
 
 # diameters in nm
-diameters = [3, 4, 5, 6, 7, 8]
+diameters = [3, 4]
 tablefile = 'include.potential_table'
 parameterfile = 'include.potential_params'
 # Target humidity
@@ -16,9 +16,9 @@ tau_s = 0.65e9
 tau_r = 0.25e9
 
 # Save plots of the interaction potentials
-savefigures = True
+savefigures = False
 # Save potential datafiles per size combination
-savedata = True
+savedata = False
 # initial distance of the potential table (relative to particle diameters) in nm
 start = -2
 # maximum distance threshold for the potential table (relative to particle diameters) in nm
