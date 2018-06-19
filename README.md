@@ -58,7 +58,7 @@ The damping coefficient for normal contact in Ns/m^3. This will be multiplied wi
 **fix     p6 all property/global gammat peratomtypepair**  
 The damping coefficent for tangential contact. This is set to zero for the current model. It needs to be parsed, however.
 
-This is for the bond model **bond** it accepts the original youngs modulus
+###Bond Model **bond**
 
 **fix     p7 all property/global bondYoungs peratomtypepair**  
 Youngs modulus of the bond (sinter bridge) in Pa
@@ -78,7 +78,7 @@ The radius of the bond. It is typically lambda * min(R1,P2), with lambda being a
 **fix     p12 all property/global bondMaxSeparationDistance peratomtypepair**  
 Threshold distance between the particles in the initial timestep
 
-This is for the bond model **bond/stiffness** it accepts the stiffness of the bond
+###Bond Model **bond/stiffness**
 
 **fix     p7 all property/global bondSn peratomtypepair**  
 Bond normal stiffness
