@@ -40,62 +40,62 @@ within *generatePotentialFiles.py* you can define the diameters you need and som
 
 ##Here is a list of required material parameters for the models:
 
-**fix     p1 all property/global kn peratomtypepair**<\br>
+**fix     p1 all property/global kn peratomtypepair**  
 This is the normal contact stiffness in N/m^2
 
-**fix     p2 all property/global kt peratomtypepair**<\br>
+**fix     p2 all property/global kt peratomtypepair**  
 This is the tangential contact stiffness in N/m^2 (usually equal to kn)
 
-**fix     p3 all property/global coefficientRollingFriction peratomtypepair**<\br>
+**fix     p3 all property/global coefficientRollingFriction peratomtypepair**  
 The rolling friction coefficient N/m^2. The friction is dependent on contact area, therefore, the rolling friction coefficient is not implemented in the classical sense. This is obviously confusing and might be corrected later
 
-**fix     p4 all property/global coefficientFriction peratomtypepair**<\br>
+**fix     p4 all property/global coefficientFriction peratomtypepair**  
 The tangential friction coefficient N/m^2. The friction is dependent on contact area, therefore, the rolling friction coefficient is not implemented in the classical sense. This is obviously confusing and might be corrected later.
 
-**fix     p5 all property/global gamman peratomtypepair**<\br>
+**fix     p5 all property/global gamman peratomtypepair**  
 The damping coefficient for normal contact in Ns/m^3. This will be multiplied with the sqauare of the effective particle radius (during runtime)
 
-**fix     p6 all property/global gammat peratomtypepair**<\br>
+**fix     p6 all property/global gammat peratomtypepair**  
 The damping coefficent for tangential contact. This is set to zero for the current model. It needs to be parsed, however.
 
 This is for the bond model **bond** it accepts the original youngs modulus
 
-**fix     p7 all property/global bondYoungs peratomtypepair**<\br>
+**fix     p7 all property/global bondYoungs peratomtypepair**  
 Youngs modulus of the bond (sinter bridge) in Pa
 
-**fix     p8 all property/global bondPoisson peratomtypepair**<\br>
+**fix     p8 all property/global bondPoisson peratomtypepair**  
 Poission's ratio of the bond (sinter bridge)
 
-**fix     p9 all property/global bondTensileStrength peratomtypepair**<\br>
+**fix     p9 all property/global bondTensileStrength peratomtypepair**  
 Tensile strength of a bond in Pa
 
-**fix     p10 all property/global bondShearStrength peratomtypepair**<\br>
+**fix     p10 all property/global bondShearStrength peratomtypepair**  
 Shear strength of a bond in Pa
 
-**fix     p11 all property/global bondRadius peratomtypepair**<\br>
+**fix     p11 all property/global bondRadius peratomtypepair**  
 The radius of the bond. It is typically lambda * min(R1,P2), with lambda being a constant value. In the example, 0.48 is used
 
-**fix     p12 all property/global bondMaxSeparationDistance peratomtypepair**<\br>
+**fix     p12 all property/global bondMaxSeparationDistance peratomtypepair**  
 Threshold distance between the particles in the initial timestep
 
 This is for the bond model **bond/stiffness** it accepts the stiffness of the bond
 
-**fix     p7 all property/global bondSn peratomtypepair**<\br>
+**fix     p7 all property/global bondSn peratomtypepair**  
 Bond normal stiffness
 
-**fix     p8 all property/global bondSt peratomtypepair**<\br>
+**fix     p8 all property/global bondSt peratomtypepair**  
 Bond tangential stiffness
 
-**fix     p9 all property/global bondTensileStrength peratomtypepair**<\br>
+**fix     p9 all property/global bondTensileStrength peratomtypepair**  
 Tensile strength of a bond in Pa
 
-**fix     p10 all property/global bondShearStrength peratomtypepair**<\br>
+**fix     p10 all property/global bondShearStrength peratomtypepair**  
 Shear strength of a bond in Pa
 
-**fix     p11 all property/global bondRf peratomtypepair** <\br>
+**fix     p11 all property/global bondRf peratomtypepair**   
 This factor is multiplied with min(R1,R2) to determine the bond radius
 
-**fix     p12 all property/global bondMaxSeparationDistance peratomtypepair**<\br>
+**fix     p12 all property/global bondMaxSeparationDistance peratomtypepair**  
 Threshold distance between the particles in the initial timestep
 
 
