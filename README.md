@@ -38,7 +38,7 @@ We provide a tool that generates the tabulated potentials and also calculates th
 
 within *generatePotentialFiles.py* you can define the diameters you need and some other values. It automatically generates all necessay files (*include.potential_table* and *include.potential_params*). Please note, that the bond parameters are not included in these files. You need to parse them independently.
 
-##Here is a list of required material parameters for the models:
+## Here is a list of required material parameters for the models:
 
 **fix     p1 all property/global kn peratomtypepair**  
 This is the normal contact stiffness in N/m^2
@@ -58,7 +58,7 @@ The damping coefficient for normal contact in Ns/m^3. This will be multiplied wi
 **fix     p6 all property/global gammat peratomtypepair**  
 The damping coefficent for tangential contact. This is set to zero for the current model. It needs to be parsed, however.
 
-###Bond Model **bond**
+### Bond Model **bond**
 
 **fix     p7 all property/global bondYoungs peratomtypepair**  
 Youngs modulus of the bond (sinter bridge) in Pa
@@ -78,7 +78,7 @@ The radius of the bond. It is typically lambda * min(R1,P2), with lambda being a
 **fix     p12 all property/global bondMaxSeparationDistance peratomtypepair**  
 Threshold distance between the particles in the initial timestep
 
-###Bond Model **bond/stiffness**
+### Bond Model **bond/stiffness**
 
 **fix     p7 all property/global bondSn peratomtypepair**  
 Bond normal stiffness
