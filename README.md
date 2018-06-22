@@ -18,7 +18,7 @@ All new files can be found in src/Nano:
 - Files for tabulated potentials (pair_table.h/.cpp)
 - multi_node_mesh_parallel_I.h, which was adjusted to allow walls with dimensions smaller than 1e-4 m at unit style si
 
-##Some information about the bond model
+## Some information on the bond model
 The applied bond model is based on Potyondy and Cundall: A bonded-particle model for rock (2004) https://www.sciencedirect.com/science/article/pii/S1365160904002874
 
 It portation of LIGGGHTS-WITH-BONDS (https://github.com/richti83/LIGGGHTS-WITH-BONDS), which uses the LAMMPS bond interface.
