@@ -38,6 +38,33 @@ We provide a tool that generates the tabulated potentials and also calculates th
 
 within *generatePotentialFiles.py* you can define the diameters you need and some other values. It automatically generates all necessay files (*include.potential_table* and *include.potential_params*). Please note, that the bond parameters are not included in these files. You need to parse them independently.
 
+## Selection of the bond models
+The following lines enable the selection of all models:
+
+pair_style      hybrid/overlay gran model hertz/stiffness/nano tangential nano cohesion bond rolling_friction nano per_molecule on table linear 450
+pair_coeff      * * gran
+pair_coeff        1 1 table include.potential_table CAP_SOLV_3.0_3.0
+pair_coeff        1 2 table include.potential_table CAP_SOLV_3.0_4.0
+pair_coeff        1 3 table include.potential_table CAP_SOLV_3.0_5.0
+pair_coeff        1 4 table include.potential_table CAP_SOLV_3.0_6.0
+pair_coeff        1 5 table include.potential_table CAP_SOLV_3.0_7.0
+pair_coeff        1 6 table include.potential_table CAP_SOLV_3.0_8.0
+pair_coeff        1 7 table include.potential_table CAP_SOLV_3.0_9.0
+pair_coeff        1 8 table include.potential_table CAP_SOLV_3.0_10.0
+pair_coeff        1 9 table include.potential_table CAP_SOLV_3.0_11.0
+pair_coeff        1 10 table include.potential_table CAP_SOLV_3.0_12.0
+pair_coeff        1 11 table include.potential_table CAP_SOLV_3.0_13.0
+pair_coeff        1 12 table include.potential_table CAP_SOLV_3.0_14.0
+pair_coeff        1 13 table include.potential_table CAP_SOLV_3.0_15.0
+pair_coeff        1 14 table include.potential_table CAP_SOLV_3.0_16.0
+.
+.
+.
+
+pair_style defines the contact models as usualy. The solvation/capillary force model is superimposed with the gran model (hertz/stiffness/nano model). Therefore, hybrid/overlay is applied to combine these two. 
+**pair_coeff      ** gran** enables the gran model (hertz/stiffness/nano) for all particle particle interactions. The following lines **pair_coeff** define the tabulated potentials per atom_type combination. e.g.:
+type 1 - type 1 is taken from include.potential_table and applies the table CAP_SOLV_3.0_3.0 for the interactions. To see the structures of the tabulated potentials, see the example folder.
+
 ## Here is a list of required material parameters for the models:
 
 **fix     p1 all property/global kn peratomtypepair**  

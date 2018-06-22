@@ -173,6 +173,10 @@ class potential:
 
     @property
     def kn(self):
+        """
+            Contact Stiffness in normal direction
+
+        """
         if self._kn is None:
             self._kn = np.zeros((len(self.diameters), len(self.diameters)))
         return self._kn
@@ -184,7 +188,7 @@ class potential:
     @property
     def waterlayer(self):
         """
-        Calculate the correct waterlayer size by linear interpolation
+        Calculate the correct water layer thickness size by linear interpolation
         from humidity vs coverage data
         return: thickness of the waterlayer
         """
@@ -195,6 +199,7 @@ class potential:
             data_waterlayer = np.array([0.262533, 0.262533, 0.330526, 0.409700, 0.486277, 0.574083, 0.697542, 0.809125, 0.809125])  # f(x)
             for lin, value in enumerate(data_humidity):
                 if value > self.humidity:
+                    # Linear interpolation
                     x0 = data_humidity[lin - 1]
                     x1 = data_humidity[lin]
                     f0 = data_waterlayer[lin - 1]
