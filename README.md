@@ -24,7 +24,7 @@ The applied bond model is based on Potyondy and Cundall: A bonded-particle model
 It portation of LIGGGHTS-WITH-BONDS (https://github.com/richti83/LIGGGHTS-WITH-BONDS), which uses the LAMMPS bond interface.
 This version uses a cohesion to implement bonds. 
 
-It is further optimized to our purpose. It creates a bond at timestep 0 (initial timestep) and has no option to recreate broken bonds or to have another trigger for bond creation. Since it was not in our scope, we did not try to write a fix that controlls this behavior. 
+It is further optimized to our purpose. It creates a bond at timestep 0 (initial timestep) and has no option to recreate broken bonds or to have another trigger for bond creation. Since it was not in our scope, we did not try to write a fix that controls this behavior. 
 It further has the option that bonds are only created between particles of the same molecule (that's why the molecular atom style is reimplemented). 
 This is controlled by the *pair_style* command. Just add *per_molecule on* or *per_molecule off* at the end of the line. Default is *on*.
 
