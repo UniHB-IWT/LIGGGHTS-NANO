@@ -1,0 +1,84 @@
+# Automatically generated inputfile for liggghts-with-bonds
+################################################################################
+# Define the atomstyle to be a hybrid of granular and molecular to use the molecule flag
+atom_style      hybrid granular molecular
+
+# Use SI Units throughout all data
+units           si
+
+# Periodic Boundary Conditions
+boundary        m m s
+
+# Optional Manual Processor configuration
+#processors      X X X
+newton          off
+
+# Stepsize for outputs etc
+variable        interv equal 5000
+
+################################################################################
+### NEIGHBORSLIST
+# Let particles communicate within short range. Communicate velocity with ghost atoms
+communicate     single vel yes
+# Neighborslist cutoff
+neighbor        3.0e-09 bin
+neigh_modify    delay 0
+
+################################################################################
+### DATA INPUT
+# Read the inputdata from datafile or alternatively from restart file
+hard_particles  yes
+read_data       data.aggregate
+
+# Write Restartfiles
+
+# Read the bond files
+include         include.bonds
+
+# Read the include file with the potentials and the interaction parameters
+# Kn, Kt, gamman, gammat, etc.
+include         include.potential_params_noadhesion
+# alternatively, you can consider the adhesion between particles
+#include         include.potential_params
+
+
+# NVE
+fix             F_nve all nve/sphere
+
+###############################################################################
+### WALL
+fix             cad1 all mesh/surface/stress file wall.stl type 15 scale 1 move 0.0 0.0 0.0
+fix             cad2 all mesh/surface/stress file wall.stl type 15 scale 1 move 0.0 0.0 8.872e-08
+fix             zwall all wall/gran model hertz tangential history rolling_friction epsd2 mesh n_meshes 2 meshes cad1 cad2
+
+################################################################################
+### Create Post folder
+shell           mkdir Post
+
+################################################################################
+### OUTPUT
+# Thermo terminal output
+thermo          ${interv}
+
+# Dumps
+dump            trjdmp all custom ${interv} Post/*.liggghtsdump id mol type radius x y z ix iy iz vx vy vz fx fy fz omegax omegay omegaz
+dump            vtkdmp all mesh/stl ${interv} Post/wall_*.stl
+
+################################################################################
+### RUN SIMULATION
+timestep        5.000000e-13
+# 1. equilibration period for the aggregate
+run             1000
+# 2. compaction with the wall
+fix             movecad all move/mesh mesh cad2 linear 0.0 0.0 -5.000000e-01
+run             180000
+# 3. Removal of the wall
+unfix           movecad
+undump          trjdmp
+undump          vtkdmp
+fix             F_visc all viscous 1e-11
+dump            trjdmp all custom 50000 Post/*.liggghtsdump id mol type radius x y z ix iy iz vx vy vz fx fy fz omegax omegay omegaz
+dump            vtkdmp all mesh/stl 50000 Post/wall_*.stl
+fix             movecad all move/mesh mesh cad2 linear 0.0 0.0 5.000000e-01
+run             300000
+

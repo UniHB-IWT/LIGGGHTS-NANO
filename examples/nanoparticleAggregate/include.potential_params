@@ -1,0 +1,142 @@
+# parameter file for liggghts input created by using the following settings: humidity 0.5, equi_dist 0.57, delta_h 0.15, sigma_solv = 0.21, F_solv_b = -11, F_solv_m = -2.4
+# Unit style si
+########################## Pair Potential Parameters ###########################
+############### Material properties required for gran pair style ###############
+variable        youngWall equal 5.60e+10
+variable        cRest equal 0.10
+# Use kWall for the wall that should have cohesion (type 14)
+variable        kWall equal 3.0e+09
+# Use kWall2 as optional cohesion for the other wall (type 15)
+variable        kWall2 equal 0
+fix             p1 all property/global kn peratomtypepair 15 26269847660.5 27542456333.9 28599787879.9 29490898487.3 30233823792.7 30883865702.4 31427936418.8 31938079489.1 32368514561.9 33099991733.3 33706180576.5 33971132805.9 34427847204.5 38368178628.9 38368178628.9 27542456333.9 24397851801.9 25454560499.3 26331556548.9 27080242755.4 27745025079.0 28311511323.6 28819229358.1 29272629745.3 30038054097.0 30669401660.7 30935660272.7 31423502542.7 35667754019.4 35667754019.4 28599787879.9 25454560499.3 26616731334.5 27605382255.7 28461728687.9 29211642102.4 29875801283.4 30455967521.0 30972502153.5 31846210778.0 32594103257.3 32908124884.5 33479221305.6 38575117821.7 38575117821.7 29490898487.3 26331556548.9 27605382255.7 28241756692.3 29177728695.8 29998727121.6 30714542497.3 31356207877.0 31944089453.9 32923053574.6 33749437684.4 34109211939.4 34739522669.9 40642550602.6 40642550602.6 30233823792.7 27080242755.4 28461728687.9 29177728695.8 30197365759.9 31095070134.7 31888159433.4 32588593579.2 33229923622.6 34327286260.2 35254824891.1 35644095672.5 36365034568.7 43136510016.0 43136510016.0 30883865702.4 27745025079.0 29211642102.4 29998727121.6 31095070134.7 27620050530.1 28370693383.4 29049392160.3 29652228270.7 30703016494.1 31591915275.4 31972104467.0 32669875244.4 39311643771.7 39311643771.7 31427936418.8 28311511323.6 29875801283.4 30714542497.3 31888159433.4 28370693383.4 29181101372.8 29899722665.6 30556783976.0 31688600225.5 32658995761.9 33082124318.5 33830290433.9 41220913073.9 41220913073.9 31938079489.1 28819229358.1 30455967521.0 31356207877.0 32588593579.2 29049392160.3 29899722665.6 30676752647.9 31372096472.2 32589918924.0 33624891248.1 34077270489.9 34900327730.7 43029289611.5 43029289611.5 32368514561.9 29272629745.3 30972502153.5 31944089453.9 33229923622.6 29652228270.7 30556783976.0 31372096472.2 32117481254.1 33414274640.2 34509153130.6 34999013839.9 35881330689.6 44752592658.6 44752592658.6 33099991733.3 30038054097.0 31846210778.0 32923053574.6 34327286260.2 30703016494.1 31688600225.5 32589918924.0 33414274640.2 34851508076.6 36078526987.5 36640674097.6 37616669165.8 47959590556.3 47959590556.3 33706180576.5 30669401660.7 32594103257.3 33749437684.4 35254824891.1 31591915275.4 32658995761.9 33624891248.1 34509153130.6 36078526987.5 37433886549.7 38029639159.8 39128384862.9 50891097845.0 50891097845.0 33971132805.9 30935660272.7 32908124884.5 34109211939.4 35644095672.5 31972104467.0 33082124318.5 34077270489.9 34999013839.9 36640674097.6 38029639159.8 38670720782.5 39807371613.8 52277145130.4 52277145130.4 34427847204.5 31423502542.7 33479221305.6 34739522669.9 36365034568.7 32669875244.4 33830290433.9 34900327730.7 35881330689.6 37616669165.8 39128384862.9 39807371613.8 41047639335.4 54881502066.6 54881502066.6 38368178628.9 35667754019.4 38575117821.7 40642550602.6 43136510016.0 39311643771.7 41220913073.9 43029289611.5 44752592658.6 47959590556.3 50891097845.0 52277145130.4 54881502066.6 99326914963.0 99326914963.0 38368178628.9 35667754019.4 38575117821.7 40642550602.6 43136510016.0 39311643771.7 41220913073.9 43029289611.5 44752592658.6 47959590556.3 50891097845.0 52277145130.4 54881502066.6 99326914963.0 99326914963.0
+fix             p2 all property/global kt peratomtypepair 15 26269847660.5 27542456333.9 28599787879.9 29490898487.3 30233823792.7 30883865702.4 31427936418.8 31938079489.1 32368514561.9 33099991733.3 33706180576.5 33971132805.9 34427847204.5 38368178628.9 38368178628.9 27542456333.9 24397851801.9 25454560499.3 26331556548.9 27080242755.4 27745025079.0 28311511323.6 28819229358.1 29272629745.3 30038054097.0 30669401660.7 30935660272.7 31423502542.7 35667754019.4 35667754019.4 28599787879.9 25454560499.3 26616731334.5 27605382255.7 28461728687.9 29211642102.4 29875801283.4 30455967521.0 30972502153.5 31846210778.0 32594103257.3 32908124884.5 33479221305.6 38575117821.7 38575117821.7 29490898487.3 26331556548.9 27605382255.7 28241756692.3 29177728695.8 29998727121.6 30714542497.3 31356207877.0 31944089453.9 32923053574.6 33749437684.4 34109211939.4 34739522669.9 40642550602.6 40642550602.6 30233823792.7 27080242755.4 28461728687.9 29177728695.8 30197365759.9 31095070134.7 31888159433.4 32588593579.2 33229923622.6 34327286260.2 35254824891.1 35644095672.5 36365034568.7 43136510016.0 43136510016.0 30883865702.4 27745025079.0 29211642102.4 29998727121.6 31095070134.7 27620050530.1 28370693383.4 29049392160.3 29652228270.7 30703016494.1 31591915275.4 31972104467.0 32669875244.4 39311643771.7 39311643771.7 31427936418.8 28311511323.6 29875801283.4 30714542497.3 31888159433.4 28370693383.4 29181101372.8 29899722665.6 30556783976.0 31688600225.5 32658995761.9 33082124318.5 33830290433.9 41220913073.9 41220913073.9 31938079489.1 28819229358.1 30455967521.0 31356207877.0 32588593579.2 29049392160.3 29899722665.6 30676752647.9 31372096472.2 32589918924.0 33624891248.1 34077270489.9 34900327730.7 43029289611.5 43029289611.5 32368514561.9 29272629745.3 30972502153.5 31944089453.9 33229923622.6 29652228270.7 30556783976.0 31372096472.2 32117481254.1 33414274640.2 34509153130.6 34999013839.9 35881330689.6 44752592658.6 44752592658.6 33099991733.3 30038054097.0 31846210778.0 32923053574.6 34327286260.2 30703016494.1 31688600225.5 32589918924.0 33414274640.2 34851508076.6 36078526987.5 36640674097.6 37616669165.8 47959590556.3 47959590556.3 33706180576.5 30669401660.7 32594103257.3 33749437684.4 35254824891.1 31591915275.4 32658995761.9 33624891248.1 34509153130.6 36078526987.5 37433886549.7 38029639159.8 39128384862.9 50891097845.0 50891097845.0 33971132805.9 30935660272.7 32908124884.5 34109211939.4 35644095672.5 31972104467.0 33082124318.5 34077270489.9 34999013839.9 36640674097.6 38029639159.8 38670720782.5 39807371613.8 52277145130.4 52277145130.4 34427847204.5 31423502542.7 33479221305.6 34739522669.9 36365034568.7 32669875244.4 33830290433.9 34900327730.7 35881330689.6 37616669165.8 39128384862.9 39807371613.8 41047639335.4 54881502066.6 54881502066.6 38368178628.9 35667754019.4 38575117821.7 40642550602.6 43136510016.0 39311643771.7 41220913073.9 43029289611.5 44752592658.6 47959590556.3 50891097845.0 52277145130.4 54881502066.6 99326914963.0 99326914963.0 38368178628.9 35667754019.4 38575117821.7 40642550602.6 43136510016.0 39311643771.7 41220913073.9 43029289611.5 44752592658.6 47959590556.3 50891097845.0 52277145130.4 54881502066.6 99326914963.0 99326914963.0
+fix             p3 all property/global coefficientRollingFriction peratomtypepair 15 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 0.95 0.95 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 0.95 0.95 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 0.95 0.95 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 0.95 0.95 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 0.95 0.95 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 0.95 0.95 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 0.95 0.95 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 0.95 0.95 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 0.95 0.95 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 0.95 0.95 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 0.95 0.95 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 0.95 0.95 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 250000000.0 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95 0.95
+fix             p4 all property/global coefficientFriction peratomtypepair 15 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 0.2 0.2 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 0.2 0.2 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 0.2 0.2 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 0.2 0.2 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 0.2 0.2 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 0.2 0.2 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 0.2 0.2 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 0.2 0.2 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 0.2 0.2 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 0.2 0.2 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 0.2 0.2 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 0.2 0.2 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 650000000.0 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2
+fix             p5 all property/global gamman peratomtypepair 15 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06 5.0e+06
+fix             p6 all property/global gammat peratomtypepair 15 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00 0.0e+00
+fix             p7 all property/global youngsModulus peratomtype   ${youngWall} ${youngWall} ${youngWall} ${youngWall} ${youngWall} ${youngWall} ${youngWall} ${youngWall} ${youngWall} ${youngWall} ${youngWall} ${youngWall} ${youngWall} ${youngWall} ${youngWall}
+fix             p8 all property/global poissonsRatio peratomtype   0.50 0.50 0.50 0.50 0.50 0.50 0.50 0.50 0.50 0.50 0.50 0.50 0.50 0.50 0.50
+fix             p9 all property/global coefficientRestitution peratomtypepair 15 ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest} ${cRest}
+fix             p10 all property/global cohesionEnergyDensity peratomtypepair 15 0 0 0 0 0 0 0 0 0 0 0 0 0 ${kWall} ${kWall2} 0 0 0 0 0 0 0 0 0 0 0 0 0 ${kWall} ${kWall2} 0 0 0 0 0 0 0 0 0 0 0 0 0 ${kWall} ${kWall2} 0 0 0 0 0 0 0 0 0 0 0 0 0 ${kWall} ${kWall2} 0 0 0 0 0 0 0 0 0 0 0 0 0 ${kWall} ${kWall2} 0 0 0 0 0 0 0 0 0 0 0 0 0 ${kWall} ${kWall2} 0 0 0 0 0 0 0 0 0 0 0 0 0 ${kWall} ${kWall2} 0 0 0 0 0 0 0 0 0 0 0 0 0 ${kWall} ${kWall2} 0 0 0 0 0 0 0 0 0 0 0 0 0 ${kWall} ${kWall2} 0 0 0 0 0 0 0 0 0 0 0 0 0 ${kWall} ${kWall2} 0 0 0 0 0 0 0 0 0 0 0 0 0 ${kWall} ${kWall2} 0 0 0 0 0 0 0 0 0 0 0 0 0 ${kWall} ${kWall2} 0 0 0 0 0 0 0 0 0 0 0 0 0 ${kWall} ${kWall2} ${kWall} ${kWall} ${kWall} ${kWall} ${kWall} ${kWall} ${kWall} ${kWall} ${kWall} ${kWall} ${kWall} ${kWall} ${kWall} ${kWall} ${kWall} ${kWall2} ${kWall2} ${kWall2} ${kWall2} ${kWall2} ${kWall2} ${kWall2} ${kWall2} ${kWall2} ${kWall2} ${kWall2} ${kWall2} ${kWall2} ${kWall} ${kWall2}
+pair_style hybrid/overlay gran model hertz/stiffness/nano tangential nano cohesion bond rolling_friction nano full_length on per_molecule on table linear 450
+pair_coeff      * * gran
+pair_coeff        1 1 table include.potential_table CAP_SOLV_5.0_5.0
+pair_coeff        1 2 table include.potential_table CAP_SOLV_5.0_6.0
+pair_coeff        1 3 table include.potential_table CAP_SOLV_5.0_7.0
+pair_coeff        1 4 table include.potential_table CAP_SOLV_5.0_8.0
+pair_coeff        1 5 table include.potential_table CAP_SOLV_5.0_9.0
+pair_coeff        1 6 table include.potential_table CAP_SOLV_5.0_10.0
+pair_coeff        1 7 table include.potential_table CAP_SOLV_5.0_11.0
+pair_coeff        1 8 table include.potential_table CAP_SOLV_5.0_12.0
+pair_coeff        1 9 table include.potential_table CAP_SOLV_5.0_13.0
+pair_coeff        1 10 table include.potential_table CAP_SOLV_5.0_15.0
+pair_coeff        1 11 table include.potential_table CAP_SOLV_5.0_17.0
+pair_coeff        1 12 table include.potential_table CAP_SOLV_5.0_18.0
+pair_coeff        1 13 table include.potential_table CAP_SOLV_5.0_20.0
+pair_coeff        1 14 table include.potential_table CAP_SOLV_5.0_99.0
+pair_coeff        1 15 table include.potential_table CAP_SOLV_5.0_99.0
+pair_coeff        2 2 table include.potential_table CAP_SOLV_6.0_6.0
+pair_coeff        2 3 table include.potential_table CAP_SOLV_6.0_7.0
+pair_coeff        2 4 table include.potential_table CAP_SOLV_6.0_8.0
+pair_coeff        2 5 table include.potential_table CAP_SOLV_6.0_9.0
+pair_coeff        2 6 table include.potential_table CAP_SOLV_6.0_10.0
+pair_coeff        2 7 table include.potential_table CAP_SOLV_6.0_11.0
+pair_coeff        2 8 table include.potential_table CAP_SOLV_6.0_12.0
+pair_coeff        2 9 table include.potential_table CAP_SOLV_6.0_13.0
+pair_coeff        2 10 table include.potential_table CAP_SOLV_6.0_15.0
+pair_coeff        2 11 table include.potential_table CAP_SOLV_6.0_17.0
+pair_coeff        2 12 table include.potential_table CAP_SOLV_6.0_18.0
+pair_coeff        2 13 table include.potential_table CAP_SOLV_6.0_20.0
+pair_coeff        2 14 table include.potential_table CAP_SOLV_6.0_99.0
+pair_coeff        2 15 table include.potential_table CAP_SOLV_6.0_99.0
+pair_coeff        3 3 table include.potential_table CAP_SOLV_7.0_7.0
+pair_coeff        3 4 table include.potential_table CAP_SOLV_7.0_8.0
+pair_coeff        3 5 table include.potential_table CAP_SOLV_7.0_9.0
+pair_coeff        3 6 table include.potential_table CAP_SOLV_7.0_10.0
+pair_coeff        3 7 table include.potential_table CAP_SOLV_7.0_11.0
+pair_coeff        3 8 table include.potential_table CAP_SOLV_7.0_12.0
+pair_coeff        3 9 table include.potential_table CAP_SOLV_7.0_13.0
+pair_coeff        3 10 table include.potential_table CAP_SOLV_7.0_15.0
+pair_coeff        3 11 table include.potential_table CAP_SOLV_7.0_17.0
+pair_coeff        3 12 table include.potential_table CAP_SOLV_7.0_18.0
+pair_coeff        3 13 table include.potential_table CAP_SOLV_7.0_20.0
+pair_coeff        3 14 table include.potential_table CAP_SOLV_7.0_99.0
+pair_coeff        3 15 table include.potential_table CAP_SOLV_7.0_99.0
+pair_coeff        4 4 table include.potential_table CAP_SOLV_8.0_8.0
+pair_coeff        4 5 table include.potential_table CAP_SOLV_8.0_9.0
+pair_coeff        4 6 table include.potential_table CAP_SOLV_8.0_10.0
+pair_coeff        4 7 table include.potential_table CAP_SOLV_8.0_11.0
+pair_coeff        4 8 table include.potential_table CAP_SOLV_8.0_12.0
+pair_coeff        4 9 table include.potential_table CAP_SOLV_8.0_13.0
+pair_coeff        4 10 table include.potential_table CAP_SOLV_8.0_15.0
+pair_coeff        4 11 table include.potential_table CAP_SOLV_8.0_17.0
+pair_coeff        4 12 table include.potential_table CAP_SOLV_8.0_18.0
+pair_coeff        4 13 table include.potential_table CAP_SOLV_8.0_20.0
+pair_coeff        4 14 table include.potential_table CAP_SOLV_8.0_99.0
+pair_coeff        4 15 table include.potential_table CAP_SOLV_8.0_99.0
+pair_coeff        5 5 table include.potential_table CAP_SOLV_9.0_9.0
+pair_coeff        5 6 table include.potential_table CAP_SOLV_9.0_10.0
+pair_coeff        5 7 table include.potential_table CAP_SOLV_9.0_11.0
+pair_coeff        5 8 table include.potential_table CAP_SOLV_9.0_12.0
+pair_coeff        5 9 table include.potential_table CAP_SOLV_9.0_13.0
+pair_coeff        5 10 table include.potential_table CAP_SOLV_9.0_15.0
+pair_coeff        5 11 table include.potential_table CAP_SOLV_9.0_17.0
+pair_coeff        5 12 table include.potential_table CAP_SOLV_9.0_18.0
+pair_coeff        5 13 table include.potential_table CAP_SOLV_9.0_20.0
+pair_coeff        5 14 table include.potential_table CAP_SOLV_9.0_99.0
+pair_coeff        5 15 table include.potential_table CAP_SOLV_9.0_99.0
+pair_coeff        6 6 table include.potential_table CAP_SOLV_10.0_10.0
+pair_coeff        6 7 table include.potential_table CAP_SOLV_10.0_11.0
+pair_coeff        6 8 table include.potential_table CAP_SOLV_10.0_12.0
+pair_coeff        6 9 table include.potential_table CAP_SOLV_10.0_13.0
+pair_coeff        6 10 table include.potential_table CAP_SOLV_10.0_15.0
+pair_coeff        6 11 table include.potential_table CAP_SOLV_10.0_17.0
+pair_coeff        6 12 table include.potential_table CAP_SOLV_10.0_18.0
+pair_coeff        6 13 table include.potential_table CAP_SOLV_10.0_20.0
+pair_coeff        6 14 table include.potential_table CAP_SOLV_10.0_99.0
+pair_coeff        6 15 table include.potential_table CAP_SOLV_10.0_99.0
+pair_coeff        7 7 table include.potential_table CAP_SOLV_11.0_11.0
+pair_coeff        7 8 table include.potential_table CAP_SOLV_11.0_12.0
+pair_coeff        7 9 table include.potential_table CAP_SOLV_11.0_13.0
+pair_coeff        7 10 table include.potential_table CAP_SOLV_11.0_15.0
+pair_coeff        7 11 table include.potential_table CAP_SOLV_11.0_17.0
+pair_coeff        7 12 table include.potential_table CAP_SOLV_11.0_18.0
+pair_coeff        7 13 table include.potential_table CAP_SOLV_11.0_20.0
+pair_coeff        7 14 table include.potential_table CAP_SOLV_11.0_99.0
+pair_coeff        7 15 table include.potential_table CAP_SOLV_11.0_99.0
+pair_coeff        8 8 table include.potential_table CAP_SOLV_12.0_12.0
+pair_coeff        8 9 table include.potential_table CAP_SOLV_12.0_13.0
+pair_coeff        8 10 table include.potential_table CAP_SOLV_12.0_15.0
+pair_coeff        8 11 table include.potential_table CAP_SOLV_12.0_17.0
+pair_coeff        8 12 table include.potential_table CAP_SOLV_12.0_18.0
+pair_coeff        8 13 table include.potential_table CAP_SOLV_12.0_20.0
+pair_coeff        8 14 table include.potential_table CAP_SOLV_12.0_99.0
+pair_coeff        8 15 table include.potential_table CAP_SOLV_12.0_99.0
+pair_coeff        9 9 table include.potential_table CAP_SOLV_13.0_13.0
+pair_coeff        9 10 table include.potential_table CAP_SOLV_13.0_15.0
+pair_coeff        9 11 table include.potential_table CAP_SOLV_13.0_17.0
+pair_coeff        9 12 table include.potential_table CAP_SOLV_13.0_18.0
+pair_coeff        9 13 table include.potential_table CAP_SOLV_13.0_20.0
+pair_coeff        9 14 table include.potential_table CAP_SOLV_13.0_99.0
+pair_coeff        9 15 table include.potential_table CAP_SOLV_13.0_99.0
+pair_coeff        10 10 table include.potential_table CAP_SOLV_15.0_15.0
+pair_coeff        10 11 table include.potential_table CAP_SOLV_15.0_17.0
+pair_coeff        10 12 table include.potential_table CAP_SOLV_15.0_18.0
+pair_coeff        10 13 table include.potential_table CAP_SOLV_15.0_20.0
+pair_coeff        10 14 table include.potential_table CAP_SOLV_15.0_99.0
+pair_coeff        10 15 table include.potential_table CAP_SOLV_15.0_99.0
+pair_coeff        11 11 table include.potential_table CAP_SOLV_17.0_17.0
+pair_coeff        11 12 table include.potential_table CAP_SOLV_17.0_18.0
+pair_coeff        11 13 table include.potential_table CAP_SOLV_17.0_20.0
+pair_coeff        11 14 table include.potential_table CAP_SOLV_17.0_99.0
+pair_coeff        11 15 table include.potential_table CAP_SOLV_17.0_99.0
+pair_coeff        12 12 table include.potential_table CAP_SOLV_18.0_18.0
+pair_coeff        12 13 table include.potential_table CAP_SOLV_18.0_20.0
+pair_coeff        12 14 table include.potential_table CAP_SOLV_18.0_99.0
+pair_coeff        12 15 table include.potential_table CAP_SOLV_18.0_99.0
+pair_coeff        13 13 table include.potential_table CAP_SOLV_20.0_20.0
+pair_coeff        13 14 table include.potential_table CAP_SOLV_20.0_99.0
+pair_coeff        13 15 table include.potential_table CAP_SOLV_20.0_99.0
+pair_coeff        14 14 table include.potential_table CAP_SOLV_99.0_99.0
+pair_coeff        14 15 table include.potential_table CAP_SOLV_99.0_99.0
+pair_coeff        15 15 table include.potential_table CAP_SOLV_99.0_99.0
